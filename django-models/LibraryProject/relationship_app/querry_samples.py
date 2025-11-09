@@ -1,8 +1,8 @@
 from relationship_app.models import Author, Book, Library, Librarian
 
-def Author.objects.get(author_name):
+def Author.objects.get(name=author_name):
     """Query all books by a specific author."""
-    books = objects.filter(author__name=author_name)
+    books = objects.filter(author=author)
     print(f"Books by {author_name}:")
     for book in books:
         print(f"- {book.title}")
