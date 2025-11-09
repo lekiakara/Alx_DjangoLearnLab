@@ -7,7 +7,6 @@ from .models import Book
 # Basic registration (enables admin access)
 # admin.site.register(Book)
 
-# pwd
 # Customized admin display
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
