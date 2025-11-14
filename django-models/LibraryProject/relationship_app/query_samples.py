@@ -12,7 +12,7 @@ def query_books_by_author(author_name):
 def list_books_in_library(library_name):
     """List all books in a library."""
     try:
-        library = Library.objects.get(name=library_name)
+        library = Library.objects.get(library=)
         books = library.books.all()
         print(f"Books in {library_name} Library:")
         for book in books:
