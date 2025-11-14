@@ -12,7 +12,7 @@ def query_books_by_author(author_name):
 def list_books_in_library(library_name):
     """List all books in a library."""
     try:
-        library = Library.objects.get(library=)
+        library = Library.objects.get(library)
         books = library.books.all()
         print(f"Books in {library_name} Library:")
         for book in books:
@@ -24,7 +24,7 @@ def list_books_in_library(library_name):
 def get_librarian_for_library(library_name):
     """Retrieve the librarian for a library."""
     try:
-        library = Librarian.objects.get(name=library_name)
+        library = Library.objects.get(name=library_name)
         librarian = library.librarian  # Uses the related_name from the model
         print(f"Librarian for {library_name}: {librarian.name}")
     except Library.DoesNotExist:
